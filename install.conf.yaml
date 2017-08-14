@@ -1,0 +1,49 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~"]
+
+# Zsh
+
+- link:
+    ~/.zshrc: zsh/zshrc
+
+- shell:
+  - "[ -d ~/.zsh/base16-shell ] || git clone https://github.com/chriskempson/base16-shell.git ~/.zsh/base16-shell"
+  - "git -C ~/.zsh/base16-shell pull"
+  - "[ -d ~/.zsh/antigen ] || git clone https://github.com/zsh-users/antigen.git ~/.zsh/antigen"
+  - "git -C ~/.zsh/antigen pull"
+  - "zsh -i -c \"antigen update\""
+
+# Vim
+
+- link:
+    ~/.config/nvim/init.vim: vim/init.vim
+    ~/.config/nvim/config: vim/config
+
+- shell:
+    - "curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim --create-dirs --output ~/.config/nvim/autoload/plug.vim"
+    - "nvim -c PlugClean -c PlugUpdate -c quitall"
+
+# Fontconfig
+
+- link:
+    ~/.config/fontconfig/fonts.conf: fontconfig/fonts.conf
+
+- shell:
+    - "fc-cache"
+
+# Idea
+
+- link:
+    ~/.ideavimrc: idea/vimrc
+
+# Visual Studio Code
+
+- link:
+    ~/.config/Code/User/settings.json: vscode/settings.json
+
+- shell:
+    - "xargs -I {} code --install-extension {} < ./vscode/extensions"

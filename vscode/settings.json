@@ -1,0 +1,43 @@
+{
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+
+  "explorer.openEditors.visible": 0,
+
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.vscode": true,
+    "**/.idea": true,
+    "**/node_modules": true
+  },
+
+  "git.enableSmartCommit": true,
+
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Iosevka",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 24,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/bin/nvim",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.disableAnnoyingNeovimMessage": true,
+
+  "search.useIgnoreFilesByDefault": true,
+  "search.quickOpen.includeSymbols": true,
+
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
+
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.5
+}
