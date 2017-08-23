@@ -30,6 +30,10 @@
   "vim.hlsearch": true,
   "vim.disableAnnoyingNeovimMessage": true,
 
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
   "search.useIgnoreFilesByDefault": true,
   "search.quickOpen.includeSymbols": true,
 

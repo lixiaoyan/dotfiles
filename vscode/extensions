@@ -4,6 +4,8 @@ PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 jpoissonnier.vscode-styled-components
 vscodevim.vim
 zhuangtongfa.Material-theme

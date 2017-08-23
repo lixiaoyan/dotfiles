@@ -33,6 +33,8 @@ export PATH
 export VISUAL=vim
 export EDITOR=vim
 
+export WINEDLLOVERRIDES="winemenubuilder.exe=d"
+
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
 alias ls="ls --color=auto"
