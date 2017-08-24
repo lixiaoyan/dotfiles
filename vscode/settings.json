@@ -18,7 +18,7 @@
   "git.enableSmartCommit": true,
 
   "editor.tabSize": 2,
-  "editor.fontFamily": "Iosevka",
+  "editor.fontFamily": "Iosevka, monospace",
   "editor.fontSize": 14,
   "editor.lineHeight": 24,
   "editor.fontLigatures": true,
