@@ -30,10 +30,6 @@
   "vim.hlsearch": true,
   "vim.disableAnnoyingNeovimMessage": true,
 
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-
   "search.useIgnoreFilesByDefault": true,
   "search.quickOpen.includeSymbols": true,
 
@@ -43,5 +39,7 @@
   "terminal.integrated.lineHeight": 1.2,
 
   "markdown.preview.fontSize": 16,
-  "markdown.preview.lineHeight": 1.5
+  "markdown.preview.lineHeight": 1.5,
+
+  "auto-close-tag.enableAutoCloseSelfClosingTag": false
 }
