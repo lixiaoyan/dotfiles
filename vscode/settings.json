@@ -44,7 +44,7 @@
     "javascript": "javascriptreact"
   },
 
-  "auto-close-tag.enableAutoCloseTag": true,
+  "auto-close-tag.fullMode": true,
 
   "markdown.preview.fontSize": 16,
   "markdown.preview.lineHeight": 1.5
