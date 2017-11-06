@@ -26,8 +26,9 @@
 
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/bin/nvim",
-  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": false,
   "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
   "vim.disableAnnoyingNeovimMessage": true,
 
   "search.useIgnoreFilesByDefault": true,
@@ -38,8 +39,13 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.2,
 
-  "markdown.preview.fontSize": 16,
-  "markdown.preview.lineHeight": 1.5,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
 
-  "auto-close-tag.enableAutoCloseSelfClosingTag": false
+  "auto-close-tag.enableAutoCloseTag": true,
+
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.5
 }
