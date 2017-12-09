@@ -21,6 +21,7 @@ export PUB_HOME=$HOME/.pub-cache
 export GEM_HOME=$(ruby -e "print Gem.user_dir")
 
 path=(
+  $HOME/.jsvu
   $HOME/Codes/flutter/bin
   $HOME/.local/bin
   $NPM_CONFIG_PREFIX/bin
