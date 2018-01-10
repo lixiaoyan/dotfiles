@@ -15,7 +15,7 @@ zstyle ':completion:*' special-dirs true
 
 bindkey -v
 
-export ANDROID_HOME=/opt/android-sdk
+export ANDROID_HOME=$HOME/Softwares/android-sdk
 export NPM_CONFIG_PREFIX=$HOME/.npm-packages
 export PUB_HOME=$HOME/.pub-cache
 export GEM_HOME=$(ruby -e "print Gem.user_dir")
