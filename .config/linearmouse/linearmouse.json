@@ -1,0 +1,19 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "vendorID" : "0x4c",
+          "productName" : "Xiaoyan's Magic Trackpad",
+          "serialNumber" : "3C:A6:F6:BC:7A:BB",
+          "productID" : "0x265"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 5
+      }
+    }
+  ]
+}

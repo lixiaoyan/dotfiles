@@ -1,0 +1,10 @@
+{
+  "$schema": "./schema.json",
+  "config": {
+    "updateChannel": "canary",
+    "fontFamily": "\"Iosevka Term\", monospace",
+    "fontSize": 16,
+    "catppuccinTheme": "latte"
+  },
+  "plugins": ["hypurr"]
+}
