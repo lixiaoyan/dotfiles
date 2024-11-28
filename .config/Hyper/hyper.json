@@ -3,7 +3,7 @@
   "config": {
     "updateChannel": "canary",
     "fontFamily": "\"Iosevka Term\", monospace",
-    "fontSize": 16,
+    "fontSize": 14,
     "catppuccinTheme": "latte"
   },
   "plugins": ["hypurr"]

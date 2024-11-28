@@ -59,3 +59,5 @@ require("lazy").setup({
 
 vim.opt.number = true
 vim.opt.cursorline = true
+vim.opt.scrolloff = 3
+vim.opt.sidescrolloff = 3
