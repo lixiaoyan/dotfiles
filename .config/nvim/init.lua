@@ -65,3 +65,4 @@ vim.opt.sidescrolloff = 3
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 0
+vim.opt.smartcase = true
