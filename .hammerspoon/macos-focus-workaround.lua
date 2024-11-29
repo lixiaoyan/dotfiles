@@ -1,3 +1,5 @@
+-- https://www.reddit.com/r/MacOS/comments/1fmmqj7/severe_focus_loss_bug_still_not_fixed_in_macos/
+
 local lastActivatedApp = nil
 local restoreActivationTimer = nil
 local lastFocusedWindowBySpace = {}
@@ -32,7 +34,7 @@ watchers:add(hs.spaces.watcher
       restoreActivationTimer = nil
     end
 
-    if hs.application.frontmostApplication():name() == "WindowManager" then
+    if hs.application.frontmostApplication():bundleID() == "com.apple.WindowManager" then
       lastFocusedWindow = lastFocusedWindowBySpace[hs.spaces.focusedSpace()]
       if lastFocusedWindow ~= nil then
         lastFocusedWindow:focus()
