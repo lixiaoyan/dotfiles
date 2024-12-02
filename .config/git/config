@@ -34,5 +34,5 @@ autoSetupRemote = true
 navigate = true
 line-numbers = true
 
-[includeIf "hasconfig:remote.*.url:git@gitlab.rightcapital.io:**"]
+[includeIf "hasconfig:remote.*.url:git@gitlab.rightcapital.io:*/**"]
 path = rightcapital.config
