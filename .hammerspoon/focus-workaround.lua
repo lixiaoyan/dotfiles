@@ -8,7 +8,7 @@ local lastFocusedWindowBySpace = {}
 watchers:add(hs.application.watcher
   .new(function(name, event, app)
     if event == hs.application.watcher.activated then
-      if name == "WindowManager" then
+      if app:bundleID() == "com.apple.WindowManager" then
         if hs.timer.absoluteTime() - lastActivatedTime < 1e9 then
           -- Fast path
           if lastActivatedApp ~= nil then
@@ -29,7 +29,7 @@ watchers:add(hs.application.watcher
   end)
   :start())
 
-hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window, name)
+hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window)
   for _, space in ipairs(hs.spaces.windowSpaces(window)) do
     lastFocusedWindowBySpace[space] = window
   end
