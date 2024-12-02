@@ -1,6 +1,7 @@
 -- https://www.reddit.com/r/MacOS/comments/1fmmqj7/severe_focus_loss_bug_still_not_fixed_in_macos/
 
 local lastActivatedApp = nil
+local lastActivatedTime = 0
 local restoreActivationTimer = nil
 local lastFocusedWindowBySpace = {}
 
@@ -8,13 +9,21 @@ watchers:add(hs.application.watcher
   .new(function(name, event, app)
     if event == hs.application.watcher.activated then
       if name == "WindowManager" then
-        restoreActivationTimer = hs.timer.doAfter(0.1, function()
+        if hs.timer.absoluteTime() - lastActivatedTime < 1e9 then
+          -- Fast path
           if lastActivatedApp ~= nil then
             lastActivatedApp:activate()
           end
-        end)
+        else
+          restoreActivationTimer = hs.timer.doAfter(0.1, function()
+            if lastActivatedApp ~= nil then
+              lastActivatedApp:activate()
+            end
+          end)
+        end
       else
         lastActivatedApp = app
+        lastActivatedTime = hs.timer.absoluteTime()
       end
     end
   end)
