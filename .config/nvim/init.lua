@@ -30,7 +30,6 @@ require("lazy").setup({
       event = "VeryLazy",
       config = function()
         require("mini.pairs").setup()
-        require("mini.surround").setup()
       end,
     },
     {
