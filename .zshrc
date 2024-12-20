@@ -29,7 +29,6 @@ bindkey "^[[B" history-substring-search-down
 
 # Aliases
 
-alias ls="eza"
 alias tree="eza --tree"
 alias unar="unar -forks skip"
 alias vim="nvim"

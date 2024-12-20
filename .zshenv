@@ -1,11 +1,9 @@
-path=(
-  "$HOME/.local/bin"
-  "$HOME/.proto/shims"
-  "$HOME/.proto/tools/node/globals/bin"
-  "/opt/homebrew/opt/uutils-coreutils/libexec/uubin"
-  $path
+typeset -U PATH path
+path+=(
+  ~/.local/bin
+  ~/.proto/shims
+  ~/.proto/tools/node/globals/bin
 )
-export PATH
 
 export EDITOR="nvim"
 export VISUAL="nvim"

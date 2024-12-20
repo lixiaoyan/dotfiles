@@ -6,3 +6,8 @@ function try_source() {
 
 source <(/opt/homebrew/bin/brew shellenv)
 try_source ~/.orbstack/shell/init.zsh
+
+path=(
+  /opt/homebrew/opt/uutils-coreutils/libexec/uubin
+  $path
+)
