@@ -2,6 +2,7 @@ path=(
   "$HOME/.local/bin"
   "$HOME/.proto/shims"
   "$HOME/.proto/tools/node/globals/bin"
+  "/opt/homebrew/opt/uutils-coreutils/libexec/uubin"
   $path
 )
 export PATH
