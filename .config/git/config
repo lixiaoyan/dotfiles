@@ -1,38 +1,39 @@
 [user]
-name = Xiaoyan Li
-email = lxy.lixiaoyan@gmail.com
+  name = Xiaoyan Li
+  email = lxy.lixiaoyan@gmail.com
 
 [alias]
-st = status
-br = branch
-co = checkout
-ci = commit
+  st = status
+  br = branch
+  co = checkout
+  ci = commit
 
 [core]
-pager = delta
+  pager = delta
 
 [init]
-defaultBranch = main
+  defaultBranch = main
 
 [diff]
-algorithm = histogram
-colorMoved = dimmed-zebra
+  algorithm = histogram
+  colorMoved = dimmed-zebra
 
 [merge]
-conflictStyle = zdiff3
+  conflictStyle = zdiff3
 
 [rebase]
-autoSquash = true
+  autoSquash = true
 
 [pull]
-ff = only
+  ff = only
 
 [push]
-autoSetupRemote = true
+  autoSetupRemote = true
 
 [delta]
-navigate = true
-line-numbers = true
+  navigate = true
+  line-numbers = true
 
-[includeIf "hasconfig:remote.*.url:git@gitlab.rightcapital.io:*/**"]
-path = rightcapital.config
+[include]
+  path = ./configs/private.gitconfig
+  path = ./themes/catppuccin.gitconfig

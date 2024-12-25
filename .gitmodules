@@ -1,0 +1,6 @@
+[submodule "/Users/lxy/.local/share/dotfiles/repos/bat-theme-catppuccin"]
+  path = /Users/lxy/.local/share/dotfiles/repos/bat-theme-catppuccin
+  url = https://github.com/catppuccin/bat.git
+[submodule "/Users/lxy/.local/share/dotfiles/repos/delta-theme-catppuccin"]
+  path = /Users/lxy/.local/share/dotfiles/repos/delta-theme-catppuccin
+  url = https://github.com/catppuccin/delta.git
