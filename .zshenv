@@ -5,9 +5,9 @@ path+=(
   ~/.proto/tools/node/globals/bin
 )
 
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR='nvim'
+export VISUAL='nvim'
 
-export LESS="-RF"
+export LESS='-RF'
 
-export NODE_OPTIONS="--max-old-space-size=8192"
+export NODE_OPTIONS='--max-old-space-size=8192'
