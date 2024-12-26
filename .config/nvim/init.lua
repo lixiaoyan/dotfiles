@@ -4,6 +4,7 @@ require("lazy").setup({
   defaults = {
     version = "*",
   },
+
   spec = {
     {
       "catppuccin/nvim",
@@ -38,16 +39,12 @@ require("lazy").setup({
       opts = {},
     },
     {
-      "NMAC427/guess-indent.nvim",
-      lazy = false,
-      opts = {},
-    },
-    {
       "stevearc/conform.nvim",
       event = "VeryLazy",
       opts = {
         format_on_save = true,
         formatters_by_ft = {
+          toml = { "taplo" },
           sh = { "shfmt" },
           lua = { "stylua" },
         },
