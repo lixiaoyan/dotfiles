@@ -20,7 +20,7 @@ bindkey -v
 
 # Aliases
 
-alias vim='nvim'
-alias jless='jless --mode=line'
-alias tree='eza --tree'
-alias unar='unar -forks skip'
+(( $+commands[nvim] )) && alias vim='nvim'
+(( $+commands[jless] )) && alias jless='jless --mode=line'
+(( $+commands[eza] )) && alias tree='eza --tree'
+(( $+commands[unar] )) && alias unar='unar -forks skip'
