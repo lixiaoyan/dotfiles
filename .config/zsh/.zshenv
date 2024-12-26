@@ -14,6 +14,12 @@ function try_source() {
 try_source ~/.cargo/env
 try_source ~/.orbstack/shell/init.zsh
 
+# https://moonrepo.dev/proto
+path+=(
+  ~/.proto/shims
+  ~/.proto/tools/node/globals/bin
+)
+
 if (( $+commands[nvim] )); then
   export EDITOR='nvim'
   export VISUAL='nvim'
