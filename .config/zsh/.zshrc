@@ -23,3 +23,9 @@ bindkey -v
 (( $+commands[nvim] )) && alias vim='nvim'
 (( $+commands[eza] )) && alias tree='eza --tree'
 (( $+commands[unar] )) && alias unar='unar -forks skip'
+
+# Shell integration
+
+if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  source $GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration
+fi
