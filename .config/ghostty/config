@@ -1,0 +1,4 @@
+theme = catppuccin-latte
+font-family = Iosevka Term
+font-size = 14
+font-thicken = true
