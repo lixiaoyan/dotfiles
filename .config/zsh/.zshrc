@@ -20,6 +20,7 @@ bindkey -v
 
 # Aliases
 
+alias ls='ls --color=auto'
 (( $+commands[nvim] )) && alias vim='nvim'
 (( $+commands[eza] )) && alias tree='eza --tree'
 (( $+commands[unar] )) && alias unar='unar -forks skip'
