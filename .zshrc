@@ -25,6 +25,13 @@ alias ls='ls --color=auto'
 (( $+commands[eza] )) && alias tree='eza --tree'
 (( $+commands[unar] )) && alias unar='unar -forks skip'
 
+function x-upgrade() {
+  set -x
+  brew upgrade
+  sheldon lock --update
+  nvim --headless '+Lazy! sync' '+quitall'
+}
+
 # Shell integration
 
 if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
