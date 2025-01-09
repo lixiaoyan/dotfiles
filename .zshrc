@@ -30,6 +30,8 @@ function x-upgrade() {
   brew upgrade
   sheldon lock --update
   nvim --headless '+Lazy! sync' '+quitall'
+  rustup update
+  cargo install-update --all
 }
 
 # Shell integration
