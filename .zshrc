@@ -7,12 +7,21 @@ setopt HIST_IGNORE_ALL_DUPS
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' list-colors $LS_COLORS
 
-(( $+commands[sheldon] )) && source <(sheldon source)
 (( $+commands[starship] )) && source <(starship init zsh)
 
-autoload -Uz compinit && compinit
-autoload -Uz bashcompinit && bashcompinit
+if (( $+commands[sheldon] )); then
+  source <(sheldon source)
+else
+  autoload -Uz compinit && compinit
+  autoload -Uz bashcompinit && bashcompinit
+fi
+
+(( $+commands[fzf] )) && source <(fzf --zsh)
+(( $+commands[zoxide] )) && source <(zoxide init zsh)
+
+export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/config
 
 # Key bindings
 

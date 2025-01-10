@@ -1,19 +1,34 @@
 shell = "zsh"
 
-[plugins."zsh-users/zsh-completions"]
+[plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
-[plugins."zsh-users/zsh-syntax-highlighting"]
+[plugins.compinit]
+inline = """
+  autoload -Uz compinit && compinit
+  autoload -Uz bashcompinit && bashcompinit
+"""
+
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+[plugins.fzf-tab.hooks]
+post = """
+  zstyle ':fzf-tab:*' use-fzf-default-opts yes
+  (( ! $+commands[fzf] )) && disable-fzf-tab
+"""
+
+[plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 
-[plugins."zsh-users/zsh-history-substring-search"]
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+[plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
 
-[plugins."zsh-users/zsh-history-substring-search".hooks]
+[plugins.zsh-history-substring-search.hooks]
 post = """
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
 """
-
-[plugins."zsh-users/zsh-autosuggestions"]
-github = "zsh-users/zsh-autosuggestions"
