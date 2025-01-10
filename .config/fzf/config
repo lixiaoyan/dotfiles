@@ -1,3 +1,4 @@
+--border
 --prompt='❯ '
 --color='bg:-1' # None
 --color='border:#ccd0da' # Surface 0
