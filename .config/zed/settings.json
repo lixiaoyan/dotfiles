@@ -1,8 +1,10 @@
 {
   "theme": "Catppuccin Latte",
   "ui_font_family": "Lexend Deca",
+  "ui_font_fallbacks": ["Symbols Nerd Font", "Source Han Sans VF"],
   "ui_font_size": 16,
   "buffer_font_family": "Iosevka Term",
+  "buffer_font_fallbacks": ["Symbols Nerd Font", "Source Han Sans VF"],
   "buffer_font_size": 14,
 
   // https://github.com/zed-industries/zed/issues/20226
