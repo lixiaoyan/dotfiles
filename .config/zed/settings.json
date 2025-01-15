@@ -20,6 +20,10 @@
     "source.fixAll.eslint": true
   },
 
+  "terminal": {
+    "line_height": "standard"
+  },
+
   "auto_install_extensions": {
     "catppuccin": true
   }
