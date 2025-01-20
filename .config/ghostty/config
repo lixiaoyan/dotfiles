@@ -2,6 +2,7 @@ theme = catppuccin-latte
 font-family = Iosevka Term
 font-size = 14
 font-thicken = true
+font-thicken-strength = 0
 adjust-cursor-thickness = 2
 background-opacity = 0.95
 window-padding-x = 8
