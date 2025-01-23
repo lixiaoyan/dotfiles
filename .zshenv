@@ -1,24 +1,24 @@
 typeset -U PATH path
-path+=(~/.local/bin)
 
 if [[ -x /opt/homebrew/bin/brew ]]; then
   source <(/opt/homebrew/bin/brew shellenv)
 fi
 
-function try_source() {
-  if [[ -f $1 ]]; then
-    source $1
-  fi
-}
+if [[ -f ~/.cargo/env ]]; then
+  source ~/.cargo/env
+fi
 
-try_source ~/.cargo/env
-try_source ~/.orbstack/shell/init.zsh
-
-# https://moonrepo.dev/proto
-path+=(
+path=(
   ~/.proto/shims
   ~/.proto/tools/node/globals/bin
+  $path
 )
+
+if [[ -f ~/.orbstack/shell/init.zsh ]]; then
+  source ~/.orbstack/shell/init.zsh
+fi
+
+path=(~/.local/bin $path)
 
 if (( $+commands[nvim] )); then
   export EDITOR='nvim'
