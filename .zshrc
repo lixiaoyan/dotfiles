@@ -45,6 +45,11 @@ function x-upgrade() {
 
 # Shell integration
 
+function _precmd() {
+  print -n '\e[?25h'
+}
+add-zsh-hook precmd _precmd
+
 if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
   source $GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration
 fi
