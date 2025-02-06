@@ -23,10 +23,6 @@ fi
 
 export FZF_DEFAULT_OPTS_FILE=~/.config/fzf/config
 
-# Key bindings
-
-bindkey -v
-
 # Aliases
 
 alias ls='ls --color=auto'

@@ -1,5 +1,8 @@
 shell = "zsh"
 
+[plugins.zsh-vi-mode]
+github = "jeffreytse/zsh-vi-mode"
+
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
