@@ -3,6 +3,11 @@ shell = "zsh"
 [plugins.zsh-vi-mode]
 github = "jeffreytse/zsh-vi-mode"
 
+[plugins.zsh-vi-mode]
+pre = """
+  ZVM_INIT_MODE=sourcing
+"""
+
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
