@@ -3,7 +3,7 @@ shell = "zsh"
 [plugins.zsh-vi-mode]
 github = "jeffreytse/zsh-vi-mode"
 
-[plugins.zsh-vi-mode]
+[plugins.zsh-vi-mode.hooks]
 pre = """
   ZVM_INIT_MODE=sourcing
 """
