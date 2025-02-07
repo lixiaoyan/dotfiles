@@ -47,6 +47,7 @@ require("lazy").setup({
         formatters_by_ft = {
           toml = { "taplo" },
           sh = { "shfmt" },
+          fish = { "fish_indent" },
           lua = { "stylua" },
           javascript = { "prettierd" },
           javascriptreact = { "prettierd" },
