@@ -23,7 +23,7 @@ github = "Aloxaf/fzf-tab"
 [plugins.fzf-tab.hooks]
 post = """
   zstyle ':fzf-tab:*' use-fzf-default-opts yes
-  zstyle ':fzf-tab:*' fzf-pad 4
+  zstyle ':fzf-tab:*' fzf-pad 5
   (( ! $+commands[fzf] )) && disable-fzf-tab
 """
 
