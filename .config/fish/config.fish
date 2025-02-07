@@ -27,6 +27,8 @@ if status is-interactive
     command -q fzf && fzf --fish | source
     command -q zoxide && zoxide init fish | source
 
+    set -gx FZF_DEFAULT_OPTS_FILE ~/.config/fzf/config
+
     command -q nvim && alias vim nvim
     command -q eza && alias tree 'eza --tree'
     command -q unar && alias unar 'unar -forks skip'
