@@ -49,6 +49,7 @@ require("lazy").setup({
           sh = { "shfmt" },
           fish = { "fish_indent" },
           lua = { "stylua" },
+          zig = { "zigfmt" },
           javascript = { "prettierd" },
           javascriptreact = { "prettierd" },
           typescript = { "prettierd" },
