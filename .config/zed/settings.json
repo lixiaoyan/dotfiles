@@ -16,6 +16,8 @@
   "use_smartcase_search": true,
   "autosave": "on_focus_change",
 
+  "tab_size": 2,
+
   "code_actions_on_format": {
     "source.fixAll.eslint": true
   },
