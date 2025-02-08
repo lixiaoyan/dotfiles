@@ -25,12 +25,13 @@ if status is-interactive
     set --global fish_greeting
     fish_config theme choose "Catppuccin Latte"
 
-    function fish_user_key_bindings
-        for mode in insert default visual
+    function fish_hybrid_key_bindings
+        for mode in default insert visual
             fish_default_key_bindings --mode $mode
         end
         fish_vi_key_bindings --no-erase
     end
+    set --global fish_key_bindings fish_hybrid_key_bindings
 
     starship init fish | source
 
