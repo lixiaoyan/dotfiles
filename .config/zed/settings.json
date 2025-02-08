@@ -23,7 +23,11 @@
   },
 
   "terminal": {
-    "line_height": "standard"
+    "line_height": "standard",
+
+    "toolbar": {
+      "breadcrumbs": false
+    }
   },
 
   "auto_install_extensions": {
