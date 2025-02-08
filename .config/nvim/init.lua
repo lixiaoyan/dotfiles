@@ -40,6 +40,10 @@ require("lazy").setup({
       opts = {},
     },
     {
+      "Darazaki/indent-o-matic",
+      opts = {},
+    },
+    {
       "stevearc/conform.nvim",
       event = "VeryLazy",
       opts = {

@@ -34,6 +34,7 @@ if status is-interactive
     set --global fish_key_bindings fish_hybrid_key_bindings
 
     starship init fish | source
+    enable_transience
 
     command --query fzf && fzf --fish | source
     command --query zoxide && zoxide init fish | source
