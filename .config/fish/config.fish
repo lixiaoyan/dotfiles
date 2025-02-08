@@ -2,34 +2,52 @@ if test -x /opt/homebrew/bin/brew
     /opt/homebrew/bin/brew shellenv | source
 end
 
-fish_add_path ~/.proto/shims ~/.proto/tools/node/globals/bin
+fish_add_path --global ~/.proto/bin
+fish_add_path --global ~/.proto/shims
+fish_add_path --global ~/.proto/tools/node/globals/bin
 
 try_source ~/.cargo/env.fish
 try_source ~/.orbstack/shell/init.fish
 
-fish_add_path ~/.local/bin
+fish_add_path --global ~/.local/bin
 
-if command -q nvim
-    set -gx EDITOR nvim
-    set -gx VISUAL nvim
-else if command -q vim
-    set -gx EDITOR vim
-    set -gx VISUAL vim
+if command --query nvim
+    set --global --export EDITOR nvim
+    set --global --export VISUAL nvim
+else if command --query vim
+    set --global --export EDITOR vim
+    set --global --export VISUAL vim
 end
 
-set -gx NODE_OPTIONS --max-old-space-size=8192
+set --global --export NODE_OPTIONS --max-old-space-size=8192
 
 if status is-interactive
+    set --global fish_greeting
     fish_config theme choose "Catppuccin Latte"
+
+    function fish_user_key_bindings
+        for mode in insert default visual
+            fish_default_key_bindings --mode $mode
+        end
+        fish_vi_key_bindings --no-erase
+    end
 
     starship init fish | source
 
-    command -q fzf && fzf --fish | source
-    command -q zoxide && zoxide init fish | source
+    command --query fzf && fzf --fish | source
+    command --query zoxide && zoxide init fish | source
 
-    set -gx FZF_DEFAULT_OPTS_FILE ~/.config/fzf/config
+    set --global --export FZF_DEFAULT_OPTS_FILE ~/.config/fzf/config
 
-    command -q nvim && alias vim nvim
-    command -q eza && alias tree 'eza --tree'
-    command -q unar && alias unar 'unar -forks skip'
+    command --query nvim && alias vim nvim
+    command --query eza && alias tree 'eza --tree'
+    command --query unar && alias unar 'unar -forks skip'
+
+    function x-upgrade
+        set --function fish_trace 1
+        brew upgrade
+        nvim --headless '+Lazy! sync' '+quitall'
+        rustup update
+        cargo install-update --all
+    end
 end

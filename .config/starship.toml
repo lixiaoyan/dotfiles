@@ -1,11 +1,11 @@
-format = '$all$fill$container$line_break$jobs$character'
+format = "$all$fill$container$line_break$jobs$character"
 
 [fill]
-symbol = '─'
-style = 'bright-white'
+symbol = "─"
+style = "bright-white"
 
 [container]
-format = ' [$name $symbol]($style)'
+format = " [$name $symbol]($style)"
 
 [battery]
 disabled = true

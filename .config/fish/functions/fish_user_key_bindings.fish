@@ -1,6 +1,0 @@
-function fish_user_key_bindings
-    for mode in insert default visual
-        fish_default_key_bindings --mode $mode
-    end
-    fish_vi_key_bindings --no-erase
-end

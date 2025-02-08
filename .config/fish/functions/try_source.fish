@@ -1,5 +1,5 @@
-function try_source -a file
-    if test -f $file
+function try_source --argument-names file
+    if test -r $file
         source $file
     end
 end
