@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushOperator", { "AddSurrounds": {} }]
+    }
+  }
+]

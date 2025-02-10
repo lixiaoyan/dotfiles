@@ -1,8 +1,7 @@
 format = "$all$fill$container$line_break$jobs$character"
 
 [fill]
-symbol = "─"
-style = "bright-white"
+symbol = " "
 
 [container]
 format = " [$name $symbol]($style)"
