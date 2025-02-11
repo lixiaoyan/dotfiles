@@ -1,6 +1,9 @@
-[submodule "catppuccin/bat"]
+[submodule ".local/share/dotfiles/repos/catppuccin-bat"]
   path = .local/share/dotfiles/repos/catppuccin-bat
   url = https://github.com/catppuccin/bat.git
-[submodule "catppuccin/delta"]
+[submodule ".local/share/dotfiles/repos/catppuccin-delta"]
   path = .local/share/dotfiles/repos/catppuccin-delta
   url = https://github.com/catppuccin/delta.git
+[submodule ".local/share/dotfiles/repos/catppuccin-ghostty"]
+  path = .local/share/dotfiles/repos/catppuccin-ghostty
+  url = https://github.com/catppuccin/ghostty.git
