@@ -30,6 +30,14 @@
     }
   },
 
+  "assistant": {
+    "version": "2",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    }
+  },
+
   "auto_install_extensions": {
     "catppuccin": true
   }
