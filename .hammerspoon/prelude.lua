@@ -18,6 +18,19 @@ function toggleApp(id)
   end
 end
 
+function selectMenuItem(app, menuItem)
+  local result = app:selectMenuItem(menuItem)
+  if result == nil then
+    for _ = 1, 10 do
+      hs.timer.usleep(1e5)
+      local result = app:selectMenuItem(menuItem)
+      if result ~= nil then
+        break
+      end
+    end
+  end
+end
+
 function registerAppHotkey(id, mods, key)
   hs.hotkey.bind(mods, key, function()
     toggleApp(id)

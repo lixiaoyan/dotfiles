@@ -12,11 +12,7 @@ hs.hotkey.bind({ "alt" }, "space", function()
     hs.execute("open -a Ghostty --background --args --initial-window=false", true)
     app = hs.application.get(id)
   end
-  local result = app:selectMenuItem(menuItem)
-  if result == nil then
-    hs.timer.usleep(1e5)
-    app:selectMenuItem(menuItem)
-  end
+  selectMenuItem(app, menuItem)
 end)
 
 require("focus-workaround")
