@@ -19,6 +19,12 @@ else if command --query vim
     set --global --export VISUAL vim
 end
 
+set --local less_path (command --search less)
+# TODO: Check the less version.
+if test $less_path != "" && test $less_path != /usr/bin/less
+    set --global --export LESS "--RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit"
+end
+
 set --global --export NODE_OPTIONS --max-old-space-size=8192
 
 if status is-interactive
