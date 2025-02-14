@@ -19,17 +19,19 @@ else if command --query vim
     set --global --export VISUAL vim
 end
 
-set --local less_path (command --search less)
-# TODO: Check the less version.
-if test $less_path != "" && test $less_path != /usr/bin/less
-    set --global --export LESS "--RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit"
+set --global --export LESS --RAW-CONTROL-CHARS
+
+set --local less_version (less --version | string match --regex --groups-only 'less (\d+)')
+if test $less_version -ge 608
+    set --global --export BAT_PAGER 'less --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
+    set --global --export DELTA_PAGER 'less --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
 end
 
 set --global --export NODE_OPTIONS --max-old-space-size=8192
 
 if status is-interactive
     set --global fish_greeting
-    fish_config theme choose "Catppuccin Latte"
+    fish_config theme choose 'Catppuccin Latte'
 
     function fish_hybrid_key_bindings
         for mode in default insert visual
@@ -45,7 +47,7 @@ if status is-interactive
     command --query fzf && fzf --fish | source
     command --query zoxide && zoxide init fish | source
 
-    set --global --export FZF_DEFAULT_OPTS_FILE ~/.config/fzf/config
+    set --global --export FZF_DEFAULT_OPTS '--prompt=\'❯ \' --style=full --no-color'
 
     command --query nvim && alias vim nvim
     command --query eza && alias tree 'eza --tree'
