@@ -14,10 +14,10 @@
 
   "vim_mode": true,
   "use_smartcase_search": true,
-  "autosave": "on_focus_change",
 
   "tab_size": 2,
 
+  "autosave": "on_focus_change",
   "code_actions_on_format": {
     "source.fixAll.eslint": true
   },
@@ -28,6 +28,10 @@
     "toolbar": {
       "breadcrumbs": false
     }
+  },
+
+  "features": {
+    "edit_prediction_provider": "zed"
   },
 
   "assistant": {
