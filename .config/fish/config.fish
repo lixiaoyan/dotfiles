@@ -27,6 +27,8 @@ end
 
 set --global --export NODE_OPTIONS --max-old-space-size=8192
 
+set --global --export GOPATH ~/.local/share/go
+
 if status is-interactive
     set --global fish_greeting
     fish_config theme choose 'Catppuccin Latte'
