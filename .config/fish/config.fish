@@ -58,7 +58,6 @@ if status is-interactive
     command --query unar && alias unar 'unar -forks skip'
 
     function x-upgrade
-        set --function fish_trace 1
         brew upgrade
         fisher update
         nvim --headless '+Lazy! sync' '+quitall'
