@@ -19,7 +19,8 @@
 
   "autosave": "on_focus_change",
   "code_actions_on_format": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true,
+    "source.organizeImports": true
   },
 
   "terminal": {
@@ -38,7 +39,7 @@
     "version": "2",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "model": "claude-3-7-sonnet-latest"
     }
   },
 
