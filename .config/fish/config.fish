@@ -20,7 +20,7 @@ else if command --query vim
 end
 
 set --local less_version (less --version | string match --regex --groups-only 'less (\d+)')
-if test $less_version -ge 608
+if test "$less_version" -ge 608
     set --global --export BAT_PAGER 'less --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
     set --global --export DELTA_PAGER 'less --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
 end
@@ -31,7 +31,9 @@ set --global --export GOPATH ~/.local/share/go
 
 if status is-interactive
     set --global fish_greeting
-    fish_config theme choose 'Catppuccin Latte'
+    if contains 'Catppuccin Latte' (fish_config theme list | string split '\n')
+        fish_config theme choose 'Catppuccin Latte'
+    end
 
     function fish_hybrid_key_bindings
         for mode in default insert visual
@@ -56,6 +58,7 @@ if status is-interactive
     function x-upgrade
         set --function fish_trace 1
         brew upgrade
+        fisher update
         nvim --headless '+Lazy! sync' '+quitall'
         rustup update
         cargo install-update --all
