@@ -1,3 +1,4 @@
+bun = "latest"
 deno = "latest"
 node = "latest"
 npm = "latest"
