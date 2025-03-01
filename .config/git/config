@@ -9,7 +9,7 @@
   ci = commit
 
 [core]
-  pager = delta
+  pager = delta || less
 
 [init]
   defaultBranch = main
@@ -36,5 +36,5 @@
   features = catppuccin-latte
 
 [include]
-  path = ./configs/private.gitconfig
   path = ./themes/catppuccin.gitconfig
+  path = ./configs/private.gitconfig
