@@ -9,7 +9,7 @@
   ci = commit
 
 [core]
-  pager = delta || less
+  pager = command -v delta &>/dev/null && delta || less
 
 [init]
   defaultBranch = main
