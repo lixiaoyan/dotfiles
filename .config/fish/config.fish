@@ -11,7 +11,10 @@ try_source ~/.orbstack/shell/init.fish
 
 fish_add_path --global ~/.local/bin
 
-if command --query nvim
+if command --query zed
+    set --global --export EDITOR 'zed --wait'
+    set --global --export VISUAL 'zed --wait'
+else if command --query nvim
     set --global --export EDITOR nvim
     set --global --export VISUAL nvim
 else if command --query vim
@@ -21,8 +24,8 @@ end
 
 set --local less_version (less --version | string match --regex --groups-only 'less (\d+)')
 if test "$less_version" -ge 608
-    set --global --export BAT_PAGER 'less --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
-    set --global --export DELTA_PAGER 'less --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
+    set --global --export BAT_PAGER 'less --+no-init --RAW-CONTROL-CHARS --quit-if-one-screen'
+    set --global --export DELTA_PAGER 'less --+no-init --RAW-CONTROL-CHARS --quit-if-one-screen'
 end
 
 set --global --export NODE_OPTIONS --max-old-space-size=8192

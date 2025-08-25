@@ -1,16 +1,11 @@
 {
   "theme": "Catppuccin Latte",
-  "ui_font_family": "Lexend Deca",
+  "ui_font_family": "Inter Variable",
   "ui_font_fallbacks": ["Symbols Nerd Font", "Source Han Sans VF"],
   "ui_font_size": 16,
   "buffer_font_family": "Iosevka Term",
   "buffer_font_fallbacks": ["Symbols Nerd Font", "Source Han Sans VF"],
   "buffer_font_size": 14,
-
-  // https://github.com/zed-industries/zed/issues/20226
-  "project_panel": {
-    "auto_fold_dirs": false
-  },
 
   "vim_mode": true,
   "use_smartcase_search": true,
@@ -20,6 +15,18 @@
   "autosave": "on_focus_change",
   "code_actions_on_format": {
     "source.fixAll.eslint": true
+  },
+
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "preferences": {
+            "includePackageJsonAutoImports": "on"
+          }
+        }
+      }
+    }
   },
 
   "terminal": {
@@ -32,14 +39,6 @@
 
   "features": {
     "edit_prediction_provider": "zed"
-  },
-
-  "assistant": {
-    "version": "2",
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
-    }
   },
 
   "auto_install_extensions": {
