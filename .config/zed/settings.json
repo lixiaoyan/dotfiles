@@ -18,13 +18,9 @@
   },
 
   "lsp": {
-    "vtsls": {
+    "tailwindcss-language-server": {
       "settings": {
-        "typescript": {
-          "preferences": {
-            "includePackageJsonAutoImports": "on"
-          }
-        }
+        "classFunctions": ["cn", "tv", "twMerge"]
       }
     }
   },
