@@ -24,8 +24,8 @@ end
 
 set --local less_version (less --version | string match --regex --groups-only 'less (\d+)')
 if test "$less_version" -ge 608
-    set --global --export BAT_PAGER 'less --+no-init --RAW-CONTROL-CHARS --quit-if-one-screen'
-    set --global --export DELTA_PAGER 'less --+no-init --RAW-CONTROL-CHARS --quit-if-one-screen'
+    set --global --export BAT_PAGER 'less --+no-init --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
+    set --global --export DELTA_PAGER 'less --+no-init --RAW-CONTROL-CHARS --quit-if-one-screen --redraw-on-quit'
 end
 
 set --global --export NODE_OPTIONS --max-old-space-size=8192
