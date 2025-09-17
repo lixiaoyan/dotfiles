@@ -1,0 +1,2 @@
+[includeIf "hasconfig:remote.*.url:git@gitlab.rightcapital.io:*/**"]
+  path = ./rightcapital.gitconfig

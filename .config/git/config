@@ -36,5 +36,5 @@
   features = catppuccin-latte
 
 [include]
-  path = ./themes/catppuccin.gitconfig
   path = ./configs/private.gitconfig
+  path = ./delta-themes/catppuccin.gitconfig
